@@ -20,7 +20,7 @@ public class Book {
     private Long id;
 
     @Column(name = "isbn",nullable = false,length = 50,unique = true)
-    private Long isbn;
+    private String isbn;
 
     @Column(name = "name",nullable = false,length =50,unique = true)
     private String name;
@@ -51,7 +51,7 @@ public class Book {
         publisher.getBooks().remove(publisher);
     }
 
-    public void createPublisher(Publisher publisher){
+    public void addPublisher(Publisher publisher){
         this.publishers.add(publisher);
         publisher.getBooks().add(this);
     }
@@ -60,7 +60,7 @@ public class Book {
         this.categories.remove(category);
         category.getBooks().remove(category);
     }
-    public void createCategory(Category category){
+    public void addCategory(Category category){
         this.categories.add(category);
         category.getBooks().add(this);
     }
@@ -70,9 +70,14 @@ public class Book {
         author.getBooks().remove(author);
     }
 
-    public void createAuthor(Author author){
+    public void addAuthor(Author author){
         this.authors.add(author);
         author.getBooks().add(this);
     }
 
+    public Book(String isbn, String name, String description) {
+        this.isbn = isbn;
+        this.name = name;
+        this.description = description;
+    }
 }
