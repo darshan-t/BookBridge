@@ -13,11 +13,11 @@ public class AuthorService {
     @Autowired
     private AuthorRepository authorRepository;
 
-    public List<Author> getAllAuhtors(){
+    public List<Author> getAllAuthors(){
         return authorRepository.findAll();
     }
 
-    public Author getAuhtorById(Long id){
+    public Author getAuthorById(Long id){
         Author author=authorRepository.findById(id).orElseThrow(()->new RuntimeException(("Author not found")));
         return author;
     }
