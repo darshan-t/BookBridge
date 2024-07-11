@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+             //background-image: url('/bb.jpg');
+            background-size: cover;
+             background-color:#C6DEFF;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .content {
+            background-color: rgba(0, 0, 0, 0.6); /* Adjust opacity as needed */
+            color: white; /* Text color */
+            padding: 50px;
+            border-radius: 10px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .icon {
+            font-size: 4rem;
+            margin-top: 20px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div th:insert="~{fragments/header :: header}"></div>
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="content">
+                    <h1 class="display-4">Welcome to Library Management System</h1>
+                    <p class="lead">Manage your library efficiently with our easy-to-use system.</p>
+                    <hr class="my-4">
+                    <p>Explore books, authors, categories, and publishers.</p>
+                    <a class="btn btn-primary btn-lg" href="/books" role="button">Get Started</a>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-2 text-center">
+                <i class="fas fa-book icon"></i>
+                <p>Books</p>
+            </div>
+            <div class="col-md-2 text-center">
+                <i class="fas fa-user icon"></i>
+                <p>Authors</p>
+            </div>
+            <div class="col-md-2 text-center">
+                <i class="fas fa-list icon"></i>
+                <p>Categories</p>
+            </div>
+            <div class="col-md-2 text-center">
+                <i class="fas fa-building icon"></i>
+                <p>Publishers</p>
+            </div>
+        </div>
+    </div>
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
