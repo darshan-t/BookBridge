@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book-details</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+</head>
+<body>
+<div th:insert="~{fragments/header :: header}"></div>
+<div class="container my-2">
+    <div class="card">
+        <div class="card-body">
+            <div th:if="${category}" class="container my-5">
+                <div class="col-mid-12">
+                    <form action="#" th:action="@{/update-category/{id}(id=${category.id})}" th:object="${category}" method="post">
+                        <div class="row">
+                            <div class="form-group col-md-8">
+                                <label for="name">Category Name</label>
+                                <input type="text" th:field="*{name}" class="form-control" id="name" placeholder="Category Name">
+                            </div>
+
+                            <div class="col-md-6">
+                                <input type="submit" class="btn btn-primary" value="Submit">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
