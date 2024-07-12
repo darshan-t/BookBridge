@@ -50,7 +50,7 @@ public class BookController {
     }
 
     @GetMapping("/remove-book/{id}")
-    public String delteBook(@PathVariable Long id,Model model){
+    public String deleteBook(@PathVariable Long id,Model model){
         bookService.deleteBook(id);
         model.addAttribute("books",bookService.getAllBooks());
         return "books";
